@@ -1,0 +1,11 @@
+[0m[[0minfo[0m] [0mPackaging /code_tmp/learn/spark/target/scala-2.10/simple-first-project_2.10-1.0.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	FirstApp$$anonfun$1.class[0m
+[0m[[0mdebug[0m] [0m	  /code_tmp/learn/spark/target/scala-2.10/classes/FirstApp$$anonfun$1.class[0m
+[0m[[0mdebug[0m] [0m	FirstApp$$anonfun$main$1.class[0m
+[0m[[0mdebug[0m] [0m	  /code_tmp/learn/spark/target/scala-2.10/classes/FirstApp$$anonfun$main$1.class[0m
+[0m[[0mdebug[0m] [0m	FirstApp$.class[0m
+[0m[[0mdebug[0m] [0m	  /code_tmp/learn/spark/target/scala-2.10/classes/FirstApp$.class[0m
+[0m[[0mdebug[0m] [0m	FirstApp.class[0m
+[0m[[0mdebug[0m] [0m	  /code_tmp/learn/spark/target/scala-2.10/classes/FirstApp.class[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m
