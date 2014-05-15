@@ -1,5 +1,7 @@
 import org.apache.spark.SparkContext
 import org.apache.spark.SparkContext._
+import org.apache.spark.{SparkConf, SparkContext}
+
 
 object FirstApp {
 
@@ -12,11 +14,16 @@ object FirstApp {
 	}
 
 	def runSpark(){
-		val sparkHome = "/code_tmp/spark-0.9.1"
+		val sparkHome = "/root/spark"
 		val logFile = sparkHome.concat("/README.md")
-		val sc = new SparkContext("local[4]","First App",sparkHome, //multi thread doesnt provide any speedup on my machine - not surprising since the readme is so small
-			List("target/scala-2.10/simple-first-project_2.10-1.0.jar")) //jar comes from options in simple.sbt
-		val logData = sc.textFile(logFile,2).cache()
+		//val sc = new SparkContext("local[4]","First App",sparkHome, //multi thread doesnt provide any speedup on my machine - not surprising since the readme is so small
+			//List("target/scala-2.10/simple-first-project_2.10-1.0.jar")) //jar comes from options in simple.sbt
+		val conf = new SparkConf()
+                 .setMaster("local")
+                              .setAppName("My application")
+                                           .set("spark.executor.memory", "1g")
+                                           val sc = new SparkContext(conf)
+    val logData = sc.textFile(logFile,2).cache()
 		val numAs = logData.filter(line => line.contains("a")).count()
 		println("Lines with a: %s".format(numAs))
 	}
